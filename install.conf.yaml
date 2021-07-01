@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      force: true
+
+- clean: ['~']
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.vimrc: vimrc
+    ~/.config/kitty/kitty.conf: kitty.conf
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
