@@ -52,6 +52,15 @@ set smartcase " Case sensitive search if it contains an uppercase letter
 map Y y$ " Make y behave like d and c
 vnoremap J :m'>+1<CR>gv=gv " Move selected text down in visual mode
 vnoremap K :m'>-2<CR>gv=gv " Move selected text up in visual mode
+nnoremap n nzzzv " Keep the cursor in the center of the screen for next
+nnoremap N Nzzzv " Keep the cursor in the center of the screen for next
+nnoremap J mzJ`z " Keep the cursor in place when joining lines
+inoremap , ,<c-g>u " Break undo history
+inoremap . .<c-g>u " Break undo history
+inoremap ! !<c-g>u " Break undo history
+inoremap ? ?<c-g>u " Break undo history
+nnoremap cn *``cgn " Change all occurences of word
+nnoremap cN *``cgN " Change all occurences of word
 
 " Themes
 
