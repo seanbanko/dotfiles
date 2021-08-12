@@ -6,9 +6,10 @@
 
 - link:
     ~/.bashrc: bashrc
-    ~/.vimrc: vimrc
-    ~/.config/nvim/init.vim: nvim
     ~/.config/kitty/kitty.conf: kitty.conf
+    ~/.config/nvim/init.vim: nvim
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
