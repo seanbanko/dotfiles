@@ -28,7 +28,6 @@ set visualbell " Flash on errors instead of beeping
 set t_vb= " Disable visual bell flash
 set wildmenu
 
-map Y y$ " Make y behave like d and c
 
 " Tabs and indenting
 "
@@ -41,12 +40,18 @@ set softtabstop=4 " Number of characters a tab inserts in insert mode
 set tabstop=4 " Number of characters a tab counts for
 
 " Search
-"
+
 set gdefault " Use global flag by default
 set hlsearch " Highlight matches
 set ignorecase " Case-insensitive search by default
 set incsearch " Live preview search matches
 set smartcase " Case sensitive search if it contains an uppercase letter
+
+" Remaps
+
+map Y y$ " Make y behave like d and c
+vnoremap J :m'>+1<CR>gv=gv " Move selected text down in visual mode
+vnoremap K :m'>-2<CR>gv=gv " Move selected text up in visual mode
 
 " Themes
 
