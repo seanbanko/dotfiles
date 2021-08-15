@@ -1,4 +1,3 @@
-
 " Plugins
 
 call plug#begin('~/.vim/plugged') " Specify a directory for plugins
@@ -6,7 +5,6 @@ call plug#begin('~/.vim/plugged') " Specify a directory for plugins
 Plug 'arcticicestudio/nord-vim'
 
 call plug#end() " Initialize plugin system
-
 
 " General settings
 "
@@ -28,9 +26,8 @@ set visualbell " Flash on errors instead of beeping
 set t_vb= " Disable visual bell flash
 set wildmenu
 
-
 " Tabs and indenting
-"
+
 set autoindent " Match indentation level from previous line
 set expandtab " Use spaces instead of tabs
 set shiftwidth=4 " Number of characters used for auto-indenting
@@ -55,12 +52,11 @@ vnoremap K :m'>-2<CR>gv=gv " Move selected text up in visual mode
 nnoremap n nzzzv " Keep the cursor in the center of the screen for next
 nnoremap N Nzzzv " Keep the cursor in the center of the screen for next
 nnoremap J mzJ`z " Keep the cursor in place when joining lines
-inoremap , ,<c-g>u " Break undo history
-inoremap . .<c-g>u " Break undo history
-inoremap ! !<c-g>u " Break undo history
-inoremap ? ?<c-g>u " Break undo history
-nnoremap cn *``cgn " Change all occurences of word
-nnoremap cN *``cgN " Change all occurences of word
+
+" Change all occurences of word
+
+nnoremap cn *``cgn 
+nnoremap cN *``cgN 
 
 " Themes
 
