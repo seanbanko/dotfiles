@@ -1,13 +1,11 @@
 " Plugins
 
 call plug#begin('~/.vim/plugged') " Specify a directory for plugins
-
-Plug 'arcticicestudio/nord-vim'
-
+    Plug 'shaunsingh/nord.nvim'
 call plug#end() " Initialize plugin system
 
 " General settings
-"
+
 set autoread " Automatically reload files that have changed
 set backspace=indent,eol,start " Backspace over line breaks
 set confirm " Ask to save on quit
