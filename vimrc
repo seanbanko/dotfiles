@@ -2,6 +2,8 @@
 
 call plug#begin('~/.vim/plugged') " Specify a directory for plugins
     Plug 'shaunsingh/nord.nvim'
+    Plug 'junegunn/goyo.vim'
+    Plug 'reedes/vim-pencil'
 call plug#end() " Initialize plugin system
 
 " General settings
@@ -60,3 +62,8 @@ nnoremap cN *``cgN
 
 colorscheme nord
 
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
