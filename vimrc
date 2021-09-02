@@ -62,6 +62,14 @@ nnoremap cN *``cgN
 
 colorscheme nord
 
+" Git commit message configuration
+
+autocmd FileType gitcommit set textwidth=72 " Set textwidth to 72 characters for a Git commit
+set colorcolumn=+1 " Color the column after the textwidth limit
+autocmd FileType gitcommit set colorcolumn+=51 " Also color the 51st column for Git commit titles
+
+" Vim-Pencil configuration
+
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd call pencil#init()
