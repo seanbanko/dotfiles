@@ -4,9 +4,15 @@ call plug#begin('~/.vim/plugged') " Specify a directory for plugins
     Plug 'shaunsingh/nord.nvim'
     Plug 'junegunn/goyo.vim'
     Plug 'reedes/vim-pencil'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
 call plug#end() " Initialize plugin system
 
 " General settings
+
+nnoremap <SPACE> <Nop>
+let mapleader = " "
 
 set autoread " Automatically reload files that have changed
 set backspace=indent,eol,start " Backspace over line breaks
@@ -75,3 +81,9 @@ augroup pencil
   autocmd FileType markdown,mkd call pencil#init()
   autocmd FileType text         call pencil#init()
 augroup END
+
+" Telescope Configuration
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
