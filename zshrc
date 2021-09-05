@@ -106,7 +106,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias nvim="~/nvim.appimage"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
