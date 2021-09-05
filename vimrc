@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged') " Specify a directory for plugins
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'ThePrimeagen/vim-be-good'
 call plug#end() " Initialize plugin system
 
 " General settings
@@ -23,7 +24,7 @@ set encoding=utf-8 " Use UTF-8 encoding
 set hidden " Allow hiding unsaved buffers
 set laststatus=2 " Always show the status bar
 set nocompatible " Don't try to be compatible with vi
-set number " Show line numbers
+set number relativenumber " Show hybrid relative line numbers
 set ruler " Show ruler
 set scrolloff=1 " Always display at least one line above/below the cursor
 set showmatch " Show matching parenthesis
