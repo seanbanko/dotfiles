@@ -2,7 +2,11 @@
     link:
       force: true
 
-- clean: ['~']
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
 
 - link:
     ~/.config/kitty/kitty.conf: kitty.conf
