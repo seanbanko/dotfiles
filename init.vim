@@ -12,6 +12,9 @@ call plug#begin('~/.vim/plugged') " Specify a directory for plugins
     Plug 'hrsh7th/nvim-cmp'
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/cmp-buffer'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-surround'
+    Plug 'lewis6991/gitsigns.nvim'
 call plug#end() " Initialize plugin system
 
 " General settings
@@ -69,7 +72,6 @@ nnoremap J mzJ`z " Keep the cursor in place when joining lines
 nnoremap cn *``cgn 
 nnoremap cN *``cgN 
 
-
 " Themes
 
 colorscheme nord
@@ -89,6 +91,7 @@ augroup pencil
 augroup END
 
 " Telescope Configuration
+
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
