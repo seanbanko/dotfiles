@@ -16,4 +16,3 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [chsh -s $(which zsh), Making zsh the default shell]
