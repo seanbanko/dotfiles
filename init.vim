@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged') " Specify a directory for plugins
     Plug 'hrsh7th/cmp-buffer'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
-    Plug 'lewis6991/gitsigns.nvim'
+    Plug 'mhinz/vim-signify'
 call plug#end() " Initialize plugin system
 
 " General settings
@@ -88,6 +88,8 @@ nnoremap - <C-x>k " Remap decrement number on line
 
 xnoremap + g<C-a> " Remap increment sequence
 xnoremap - g<C-x> " Remap decrement sequence
+
+nnoremap \ <C-^> " Use backslash to switch to previous buffer
 
 " Change all occurences of word
 
