@@ -62,19 +62,48 @@ set smartcase " Case sensitive search if it contains an uppercase letter
 
 " Remaps
 
-map Y y$ " Make y behave like d and c
-nnoremap n nzzzv " Keep the cursor in the center of the screen for next
-nnoremap N Nzzzv " Keep the cursor in the center of the screen for next
 nnoremap J mzJ`z " Keep the cursor in place when joining lines
+
+" Keep the cursor in the center of the screen when curly-brace jumping
+" For some reason these only work if I keep all the [ related lines
+
+nnoremap {  {zz
+nnoremap }  }zz
+nnoremap n  nzz
+nnoremap N  Nzz
+nnoremap [c [czz
+nnoremap ]c ]czz
+nnoremap [j <C-o>zz
+nnoremap ]j <C-i>zz
+nnoremap [s [szz
+nnoremap ]s ]szz
+
+" Keep the cursor in the center of the screen when searching
+
+nnoremap n  nzz 
+nnoremap N  Nzz
+
+nnoremap + <C-a>k " Remap increment number on line
+nnoremap - <C-x>k " Remap decrement number on line
+
+xnoremap + g<C-a> " Remap increment sequence
+xnoremap - g<C-x> " Remap decrement sequence
 
 " Change all occurences of word
 
 nnoremap cn *``cgn 
 nnoremap cN *``cgN 
 
-" Themes
+" Colors
 
 colorscheme nord
+
+" Give visual feedback when yanking
+
+augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+augroup end
 
 " Git commit message configuration
 
