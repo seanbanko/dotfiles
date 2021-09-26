@@ -10,8 +10,7 @@
 
 - link:
     ~/.config/kitty/kitty.conf: kitty.conf
-    ~/.config/nvim/init.vim: init.vim
-    ~/.vimrc: init.vim
+    ~/.config/nvim: nvim
     ~/.zshrc: zshrc
 
 - shell:
