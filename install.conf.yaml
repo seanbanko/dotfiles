@@ -9,7 +9,7 @@
       recursive: true
 
 - link:
-    ~/.config/kitty/kitty.conf: kitty.conf
+    ~/.config/kitty: kitty
     ~/.config/nvim: nvim
     ~/.zshrc: zshrc
 
