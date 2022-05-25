@@ -8,12 +8,12 @@ cd ~
 
 echo "Installing packages"
 sudo apt update && sudo apt upgrade
-sudo apt install code firefox git kitty spotify zoom zsh
+sudo apt install firefox git kitty spotify zoom zsh
 
 # Install dotfiles
 
 echo "Installing dotfiles"
-git clone https://github.com/seanbanko/dotfiles cd ~/dotfiles && ./install
+cd ~ && git clone https://github.com/seanbanko/dotfiles && cd ~/dotfiles && ./install
 
 # Install oh-my-zsh
 
