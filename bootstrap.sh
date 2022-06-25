@@ -4,16 +4,22 @@
 
 cd ~
 
+# Install Homebrew so that you can use 
+
+echo "Installing Homebrew"
+/bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
 # Install packages
 
 echo "Installing packages"
 sudo apt update && sudo apt upgrade
-sudo apt install firefox git kitty spotify zoom zsh
+brew install firefox git kitty nvim spotify zsh
 
 # Install dotfiles
 
 echo "Installing dotfiles"
-cd ~ && git clone https://github.com/seanbanko/dotfiles && cd ~/dotfiles && ./install
+git clone https://github.com/seanbanko/dotfiles && dotfiles/install
 
 # Install oh-my-zsh
 
