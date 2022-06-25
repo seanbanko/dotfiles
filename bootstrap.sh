@@ -22,12 +22,14 @@ fi
 # Install packages
 
 echo "Installing packages"
-brew install git glow nvim ripgrep spotify tree zsh
+brew install git glow nvim ripgrep tree zsh
 brew install --cask kitty
+brew install --cask spotify
 
 # Install Firefox (only available on macOS Homebrew)
 if test ! "$(uname)" = "Darwin"
-  then
+then
+    brew install --cask firefox
 fi
 
 # Install dotfiles
