@@ -27,11 +27,6 @@ fi
 echo "Installing packages"
 brew install git glow nvim ripgrep tree zsh
 
-# Install Firefox (only available on macOS Homebrew)
-if test ! "$(uname)" = "Darwin"
-then
-fi
-
 # Install dotfiles
 
 echo "Installing dotfiles"
