@@ -9,11 +9,14 @@ cd ~
 echo "Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Add appropriate version of brew to PATH
-if test ! "$(uname)" = "Darwin"
+# Do macOS only things
+if test "$(uname)" = "Darwin"
 then
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /home/sean/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv shellenv)"
+    brew install --cask firefox
+    brew install --cask kitty
+    brew install --cask spotify
 else
     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/sean/.zprofile
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -23,13 +26,10 @@ fi
 
 echo "Installing packages"
 brew install git glow nvim ripgrep tree zsh
-brew install --cask kitty
-brew install --cask spotify
 
 # Install Firefox (only available on macOS Homebrew)
 if test ! "$(uname)" = "Darwin"
 then
-    brew install --cask firefox
 fi
 
 # Install dotfiles
@@ -47,7 +47,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 chsh -s $(which zsh)
 
 # Re-add Homebrew to PATH because it probably got removed
-if test ! "$(uname)" = "Darwin"
+if test "$(uname)" = "Darwin"
 then
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /home/sean/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv shellenv)"
