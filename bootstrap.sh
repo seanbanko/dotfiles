@@ -18,6 +18,7 @@ then
     brew install --cask kitty
     brew install --cask spotify
 else
+    echo "/home/linuxbrew/.linuxbrew/bin/brew" | sudo tee -a /etc/shells
     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/sean/.zprofile
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
@@ -35,7 +36,7 @@ git clone https://github.com/seanbanko/dotfiles && dotfiles/install
 # Install oh-my-zsh
 
 echo "Installing oh-my-zsh"
-/bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ZSH = /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -45,8 +46,9 @@ chsh -s $(which zsh)
 if test "$(uname)" = "Darwin"
 then
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /home/sean/.zprofile
-    eval "$(/opt/homebrew/bin/brew shellenv shellenv)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 else
+    echo "/home/linuxbrew/.linuxbrew/bin/brew" | sudo tee -a /etc/shells
     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/sean/.zprofile
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
