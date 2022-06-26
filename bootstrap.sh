@@ -14,7 +14,7 @@ echo "Installing Homebrew"
 if test "$(uname)" = "Darwin"
 then
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /home/sean/.zprofile
-    eval "$(/opt/homebrew/bin/brew shellenv shellenv)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
     brew install --cask firefox
     brew install --cask kitty
     brew install --cask spotify
