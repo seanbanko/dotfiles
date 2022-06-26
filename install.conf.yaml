@@ -6,6 +6,10 @@
     ~/.config/kitty: kitty
     ~/.config/nvim: nvim
     ~/.zshrc: zshrc
+    /usr/share/X11/xkb/symbols/pc: zorinos-kbd-layout
+
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
+
+

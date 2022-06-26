@@ -23,7 +23,7 @@ xkb_symbols "pc105" {
     key <NMLK> {	[ Num_Lock 		]	};
 
     key <LFSH> {	[ Shift_L		]	};
-    key <LCTL> {	[ Super_L		]	};
+    key <LCTL> {	[ Control_L		]	};
     key <LWIN> {	[ Alt_L			]	};
 
     key <RTSH> {	[ Shift_R		]	};
