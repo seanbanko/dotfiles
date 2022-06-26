@@ -4,11 +4,9 @@
 set -e
 
 # cd to home directory, just in case
-
 cd ~
 
 # Install Homebrew so that you can use 
-
 echo "Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -30,17 +28,14 @@ else
 fi
 
 # Install packages
-
 echo "Installing packages"
 brew install git glow nvim ripgrep tree zsh
 
 # Install dotfiles
-
 echo "Installing dotfiles"
-git clone https://github.com/seanbanko/dotfiles && dotfiles/install
+dotfiles/install
 
 # Install oh-my-zsh
-
 echo "Installing oh-my-zsh"
 ZSH = /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
