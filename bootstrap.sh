@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Don't abort the script if a command fails
+set -e
+
 # cd to home directory, just in case
 
 cd ~
@@ -21,6 +24,9 @@ else
     echo "/home/linuxbrew/.linuxbrew/bin/brew" | sudo tee -a /etc/shells
     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/sean/.zprofile
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    apt install firefox
+    apt install kitty
+    apt install spotify
 fi
 
 # Install packages
