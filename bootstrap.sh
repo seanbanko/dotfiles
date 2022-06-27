@@ -6,25 +6,28 @@ set -e
 # cd to home directory, just in case
 cd ~
 
-# Install Homebrew so that you can use 
-echo "Installing Homebrew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Install or update Homebrew
+if [ ! command -v brew &> /dev/null]; then
+  echo 'Installing homebrew'
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /home/sean/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  echo 'Updating homebrew'
+  brew update
+fi
 
 # Do macOS only things
 if test "$(uname)" = "Darwin"
 then
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /home/sean/.zprofile
-    eval "$(/opt/homebrew/bin/brew shellenv)"
     brew install --cask firefox
     brew install --cask kitty
     brew install --cask spotify
 else
-    echo "/home/linuxbrew/.linuxbrew/bin/brew" | sudo tee -a /etc/shells
+    echo "/home/linuxbrew/.linuxbrew/bin/zsh" | sudo tee -a /etc/shells
     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/sean/.zprofile
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    apt install firefox
-    apt install kitty
-    apt install spotify
+    sudo apt install firefox kitty
 fi
 
 # Install packages
