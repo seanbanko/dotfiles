@@ -85,9 +85,6 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-export PATH="$HOME/.local/bin:$PATH"
-export PATH=$PATH:$HOME/.platformio/penv/bin
-export PATH=$PATH:/usr/local/go/bin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -186,8 +183,7 @@ alias c="clear"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-
-
-# fnm
-export PATH=/home/sean/.fnm:$PATH
-eval "`fnm env`"
+export EDITOR="/snap/bin/nvim"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH=$PATH:$HOME/.platformio/penv/bin
+export PATH=$PATH:/usr/local/go/bin
