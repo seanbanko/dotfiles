@@ -8,15 +8,16 @@ cd ~
 
 # Install packages
 echo "Installing packages"
-sudo apt install firefox git kitty vim ripgrep tree zsh kitty
+sudo apt install firefox git kitty fzf ripgrep tree zsh kitty
+
+sudo snap install nvim glow
 
 # Install dotfiles
 echo "Installing dotfiles"
 sudo dotfiles/install
 
-# Set up keyboard layout
-echo "Installing keyboard layout file"
-sudo cp -f ~/dotfiles/zorinos-kbd-layout /usr/share/X11/xkb/symbols/pc
+echo "Installing Kinto (keyboard remaps)"
+wget -qO- https://raw.githubusercontent.com/rbreaves/kinto/HEAD/install/linux.sh || curl -fsSL https://raw.githubusercontent.com/rbreaves/kinto/HEAD/install/linux.sh
 
 # Install oh-my-zsh
 echo "Installing oh-my-zsh"

@@ -1,0 +1,5 @@
+[user]
+	name = Your Name
+	email = me@example.com
+[credential]
+	helper = GCM_CORE_HELPER

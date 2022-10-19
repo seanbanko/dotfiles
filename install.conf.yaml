@@ -6,9 +6,11 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.gitconfig: git/gitconfig
     ~/.config/kitty: kitty
+    ~/.config/kinto/kinto.py: kinto/kinto.py
     ~/.config/nvim: nvim
-    ~/.zshrc: zshrc
+    ~/.zshrc: zsh/zshrc
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
