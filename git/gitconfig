@@ -3,4 +3,6 @@
 [core]
     editor = nvim
 [init]
-  defaultBranch = main
+    defaultBranch = main
+[credential]
+	helper = /usr/local/share/gcm-core/git-credential-manager-core
