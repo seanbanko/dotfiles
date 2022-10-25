@@ -521,6 +521,14 @@ define_keymap(re.compile("^org.gnome.Console$|^Kgx$|^deepin-terminal$|^Angry*IP*
     K("RC-Shift-Right"):        K("C-Tab"),             # Tab nav: Go to next tab (right)
 },"Tab Navigation for apps that want Ctrl+Shift+Tab/Ctrl+Tab")
 
+# Special overrides for Kitty
+define_keymap(re.compile("^kitty$", re.IGNORECASE),{
+    K("RC-Shift-Left_Brace"):   K("C-Shift-Left"),               # Tab nav: Go to prior tab (left)
+    K("RC-Shift-Right_Brace"):  K("C-Shift-Right"),                     # Tab nav: Go to next tab (right)
+    K("RC-L"):                  K("C-L"),                       # Clear log
+    K("RC-K"):                  K("C-L"),                       # Clear log (macOS)
+}, "Kitty terminal")
+
 # Special overrides for terminals for shortcuts that conflict with General GUI block below.
 define_keymap(re.compile(termStr, re.IGNORECASE),{
     K("Alt-Backspace"):           K("Alt-Shift-Backspace"), # Wordwise delete word left of cursor in terminals
