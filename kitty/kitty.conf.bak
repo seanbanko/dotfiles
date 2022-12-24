@@ -26,10 +26,10 @@ map ctrl+0 change_font_size all 0
 
 font_family FiraCode Nerd Font
 font_size 14
-adjust_line_height 125%
+adjust_line_height 175%
 disable_ligatures cursor
 
 # BEGIN_KITTY_THEME
-# Rosé Pine Dawn
+# Catppuccin-Macchiato
 include current-theme.conf
 # END_KITTY_THEME
