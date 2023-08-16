@@ -1,43 +1,46 @@
-# Basic Computer Setup
+# Computer Setup Guide
+
+## Homebrew
+
+Install [Homebrew](https://brew.sh/).
+
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)`
 
 ## Browser
 
-- [ ] Install Firefox
-- [ ] Sign into Dashlane
-- [ ] Sign into Mozilla
-- [ ] Sign into Google
+Install software from your Brewfile (if you have one) `brew bundle install`.
+
+Otherwise, continue.
 
 ## Neovim
 
 - [ ] Install Neovim
-- [ ] If on Linux, install xclip (Neovim clipboard)
+- [ ] Copy ~/.config/nvim from dotfiles 
 
 ## Git
-- [ ] Generate a new Personal Access Token
+
 - [ ] Configure git (git config --global user.name, user.email, credential helper etc)
+- [ ] Generate a new Personal Access Token on GitHub 
 
 ## Shell
+
 - [ ] Install zsh: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-    - [ ] Install powerlevel10k `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
-    - [ ] Install zsh-autosuggestions: `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
-    - [ ] Install zsh-syntax-highlighting: `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+    - [ ] Install powerlevel10k`git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+    - [ ] Install zsh-autosuggestions: `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions` 
+    - [ ] Install zsh-syntax-highlighting: `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting` 
 
-## Languages, package managers, etc.
+## Languages and Package Managers
 
-- Install Python
-    - [ ] Make python be python3 `sudo apt install python-is-python3` or just `alias python=python3`
-- Install Go (download tar from web and run installer), add to path
-- Install Rust `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-- Install npm and update node version
+- `brew install go`
 
 ## Command Line Tools
 
 - [ ] Install command line stuff
     - curl
-    - git 
-    - fzf 
-    - ripgrep 
-    - tree 
+    - git
+    - fzf
+    - ripgrep
+    - tree
     - wget
     - glow (snap)
 

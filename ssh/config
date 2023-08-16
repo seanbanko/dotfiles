@@ -1,6 +1,0 @@
-Host biglab
-    HostName biglab.seas.upenn.edu
-    User sbanko
-Host eniac
-    HostName eniac.seas.upenn.edu
-    User sbanko

@@ -8,9 +8,7 @@
     ~/.dotfiles: ''
     ~/.ssh/config: ssh/config
     ~/.gitconfig: git/gitconfig
-    ~/commitlint.config.js: git/commitlint.config.js
     ~/.config/kitty: kitty
-    ~/.config/kinto/kinto.py: kinto/kinto.py
     ~/.config/nvim: nvim
     ~/.zshrc: zsh/zshrc
 
