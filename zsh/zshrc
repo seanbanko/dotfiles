@@ -20,9 +20,10 @@ export EDITOR=nvim
 
 alias ..="cd .."
 alias cp="cp -i"
-alias downloads="~/Downloads"
 alias mv="mv -i"
 alias rm="rm -i"
+alias ssh="kitty +kitten ssh"
+command -v gum >/dev/null 2>&1 && alias less="gum pager"
 
 # Packages
 
@@ -35,6 +36,11 @@ export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:~/.local/bin
 [ -f "/Users/seanbanko/.ghcup/env" ] && source "/Users/seanbanko/.ghcup/env" # ghcup-env
 # export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+## [Zoxide](https://github.com/ajeetdsouza/zoxide)
+eval "$(zoxide init zsh --cmd j)"
 
 ## Powerlevel10k
 

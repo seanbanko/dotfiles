@@ -1,0 +1,11 @@
+fzf
+glow
+gum
+httpie
+jq
+neovim
+raycast
+ripgrep
+tldr
+tree
+zoxide

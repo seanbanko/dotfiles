@@ -6,11 +6,11 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.ssh/config: ssh/config
-    ~/.gitconfig: git/gitconfig
-    ~/.config/kitty: kitty
     ~/.config/nvim: nvim
     ~/.zshrc: zsh/zshrc
+    ~/.config/kitty: kitty
+    ~/.gitconfig: git/gitconfig
+    ~/.ssh/config: ssh/config
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
