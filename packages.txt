@@ -1,3 +1,4 @@
+fd
 fzf
 glow
 gum
