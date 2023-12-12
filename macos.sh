@@ -4,8 +4,8 @@
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set key repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Enable quitting Finder with cmd+q
 defaults write com.apple.finder QuitMenuItem -bool true
