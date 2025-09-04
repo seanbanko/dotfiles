@@ -1,0 +1,11 @@
+font-family = FiraCode Nerd Font Mono
+font-size = 10
+
+theme = catppuccin-mocha
+
+keybind = cmd+shift+l=next_tab
+keybind = cmd+shift+h=previous_tab
+keybind = cmd+enter=new_split:down
+keybind = opt+shift+j=resize_split:down,10
+keybind = opt+shift+k=resize_split:up,10
+keybind = cmd+shift+enter=new_split:right
