@@ -6,11 +6,14 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.config/ghostty: ghostty
     ~/.config/nvim: nvim
-    ~/.zshrc: zsh/zshrc
-    ~/.config/kitty: kitty
+    ~/.config/starship.toml: starship.toml
     ~/.gitconfig: git/gitconfig
+    ~/.gitignore.global: git/gitignore.global
+    ~/.ripgreprc: ripgreprc
     ~/.ssh/config: ssh/config
+    ~/.zshrc: zshrc
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]

@@ -1,9 +1,24 @@
 [include]
-    path = ~/.gitconfig.local
+	path = ~/.gitconfig.local
 [core]
-    editor = nvim
+	editor = nvim
+	excludesfile = /Users/seanbanko/.gitignore.global
 [init]
-    defaultBranch = main
+	defaultBranch = main
 [credential]
-    credentialStore = plaintext
-    helper = /usr/local/share/gcm-core/git-credential-manager
+	credentialStore = plaintext
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[push]
+	autoSetupRemote = true
+[user]
+	name = Sean Banko
+	email = sean.banko@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ2GLhsxDPHp6RdT2Q2J/ablZA62wrqMqORDEKJk+Vc6 
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
