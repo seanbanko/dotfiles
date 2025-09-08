@@ -6,6 +6,7 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.config/direnv: direnv
     ~/.config/ghostty: ghostty
     ~/.config/nvim: nvim
     ~/.config/starship.toml: starship.toml
