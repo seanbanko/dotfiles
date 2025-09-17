@@ -1,7 +1,7 @@
 font-family = FiraCode Nerd Font Mono
 font-size = 10
 
-theme = rose-pine
+theme = Rose Pine Moon
 
 keybind = shift+enter=text:\n
 keybind = cmd+shift+l=next_tab
